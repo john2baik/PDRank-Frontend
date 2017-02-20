@@ -52,7 +52,7 @@ p {
 
 // header
 
-#logo {
+#logo-link {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
@@ -61,10 +61,16 @@ p {
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
+
   &:hover {
     color: white;
     text-decoration: none;
   }
+}
+
+#JamSesh-logo-image {
+  width: 40px;
+  height: 40px;
 }
 
 // footer

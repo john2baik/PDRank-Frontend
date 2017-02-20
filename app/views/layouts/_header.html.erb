@@ -1,6 +1,11 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to 'sample app', root_path, id: 'logo' %>
+    <%= link_to(image_tag('JamSeshLogo.jpg',
+                          alt: 'JamSesh logo',
+                          id: 'JamSesh-logo-image'),
+                '#',
+                id: 'logo-link',
+                class: 'navbar-brand') %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to 'Home', root_path %></li>
