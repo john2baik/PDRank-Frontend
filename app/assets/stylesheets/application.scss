@@ -1,0 +1,172 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// variables
+$gray-medium-light: #eaeaea;
+
+// general
+
+
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center_jumbotron {
+  text-align: center;
+  width:100%;
+  background-color: white;
+  border: 5px solid purple;
+  border-radius:10px;
+  opacity:0.7;
+
+  h1 {
+    margin-bottom: 10px;
+  }
+  padding-bottom: 100px;
+}
+
+subdiv{
+  float:left;
+  width:33%;
+  max-width:500px;
+  border:5px solid purple;
+  margin:1px;
+  display: inline;
+  height:200px;
+  overflow:auto;
+  border-radius:10px;
+  background-color: white;
+  opacity: 0.7;
+}
+
+subheader{
+  font-size: 2.5em;
+  text-align: center;
+  color:black;
+
+}
+
+subtext{
+  font-size:1em;
+  text-align:center;
+  color:black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+// background image
+
+#background-image {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+
+  opacity: 0.7;
+  z-index: -1;
+}
+
+// header
+
+
+.logo-link {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 8px;
+  font-weight: bold;
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.logo-name {
+  padding-top: 20px;
+  margin-left: -20px;
+}
+
+#JamSesh-logo-image {
+  width: 40px;
+  height: 40px;
+}
+
+// footer
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
