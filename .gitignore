@@ -8,7 +8,7 @@
 /.bundle
 
 # Ignore the default SQLite database.
-/db/*.sqlite3
+
 /db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
@@ -16,15 +16,14 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-.idea/*
 
 # Ignore Byebug command history file.
 .byebug_history
 
 Would skip repository JamSesh2/
-db/migrate/
 
 # Personal ignorances
-.idea/*
+.idea/
 /app/assets/images/*
 
+db/development.sqlite3

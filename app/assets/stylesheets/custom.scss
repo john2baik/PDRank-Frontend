@@ -1,10 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-// variables
-$gray-medium-light: #eaeaea;
-
-// general
+/* ----------------------------- general ----------------------------- */
 
 body {
   padding-top: 60px;
@@ -16,13 +13,6 @@ section {
 
 textarea {
   resize: vertical;
-}
-
-.center {
-  text-align: center;
-  h1 {
-    margin-bottom: 10px;
-  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -50,10 +40,118 @@ p {
   line-height: 1.7em;
 }
 
-// background image
+/* ----------------------------- home ----------------------------- */
 
+// center area
+.center {
+  background-color: transparent;
+  color: whitesmoke;
+
+  text-align: center;
+
+  margin: 100px;
+
+  opacity: 0.7;
+
+  transition: opacity 0.85s linear;
+  transition-delay: 0.25s;
+
+  h1 {
+    position: relative;
+
+    -webkit-animation: inc_spacing 5s;
+    animation: inc_spacing 5s;
+
+    margin-bottom: 10px;
+    display: inline-block;
+
+    padding: 0.35em 1em;
+
+    line-height: 1.75em;
+
+    letter-spacing: 0.225em;
+
+    font-family: "Arial Black", sans-serif;
+    text-transform: uppercase;
+
+    &:before {
+      position: relative;
+
+      -webkit-animation: draw_line 5s;
+      animation: draw_line 5s;
+
+      display: block;
+
+      background-color: whitesmoke;
+      content: '';
+
+      margin: auto;
+
+      width: 100%;
+      height: 2px;
+    }
+
+    &:after {
+      position: relative;
+
+      -webkit-animation: draw_line 5s;
+      animation: draw_line 5s;
+
+      display: block;
+
+      background-color: whitesmoke;
+      content: '';
+
+      margin: auto;
+
+      width: 100%;
+      height: 2px;
+    }
+    
+    @-webkit-keyframes draw_line {
+      from {
+        width: 0;
+      }
+
+       to {
+         width: 100%;
+       }
+    }
+  }
+
+  h2 {
+    position: relative;
+
+    color: whitesmoke;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+  
+  @-webkit-keyframes inc_spacing {
+    from {
+      letter-spacing: 0em;
+    }
+
+    to {
+      letter-spacing: 0.225em;
+    }
+  }
+}
+
+.signup-btn {
+  color: whitesmoke;
+}
+
+// background image
 #background-image {
+  filter: brightness(50%);
+
   position: absolute;
+
+  -webkit-animation: fadein 4s;
+  animation: fadein 4s;
 
   width: 100%;
   height: 100%;
@@ -61,11 +159,21 @@ p {
   top: 0;
   left: 0;
 
-  opacity: 0.7;
+  opacity: 0.6;
   z-index: -1;
 }
 
-// header
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.6;
+  }
+}
+
+/* ----------------------------- header ----------------------------- */
 
 .logo-link {
   float: left;
@@ -93,109 +201,46 @@ p {
   height: 40px;
 }
 
-// footer
+/* ----------------------------- footer ----------------------------- */
 
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
-  a {
-    color: $gray;
+  border-top: 1px solid whitesmoke;
+  color: whitesmoke;
+
+  .page-link {
     &:hover {
-      color: $gray-darker;
+      background-color: transparent;
+      color: lightsteelblue;
     }
   }
+
+  a {
+    color: whitesmoke;
+
+    &:hover {
+      background-color: transparent;
+      color: lightsteelblue;
+    }
+
+    &:visited {
+      background-color: transparent;
+      color: whitesmoke;
+    }
+  }
+
   small {
     float: left;
   }
+
   ul {
     float: right;
     list-style: none;
+
     li {
       float: left;
       margin-left: 15px;
     }
-  }
-}
-
-@mixin box_sizing{
-  -mox-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-
-}
-
-
-.debug_dump{
-  clear:both;
-  float:left;
-  width: 100%;
-  margin0top: 45px;
-  @include box_sizing;
-}
-
-/* sidebar */
-
-aside {
-  section.user_info {
-    margin-top: 20px;
-  }
-  section {
-    padding: 10px 0;
-    margin-top: 20px;
-    &:first-child {
-      border: 0;
-      padding-top: 0;
-    }
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
-    h1 {
-      font-size: 1.4em;
-      text-align: left;
-      letter-spacing: -1px;
-      margin-bottom: 3px;
-      margin-top: 0px;
-    }
-  }
-}
-
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-
-.gravatar_edit {
-  margin-top: 15px;
-}
-
-/* forms */
-
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bcd;
-  width: 100%;
-  margin-bottom: 20px;
-  @include box_sizing;
-}
-
-input {
-  height: auto !important;
-}
-
-#error_explanation {
-  color: red;
-  ul {
-    color: red;
-    margin: 0 0 30px 0;
-  }
-}
-
-.field_with_errors {
-  @extend .has-error;
-  .form-control {
-    color: $state-danger-text;
   }
 }

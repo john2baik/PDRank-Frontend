@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/JamSesh2.iml" filepath="$PROJECT_DIR$/.idea/JamSesh2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../sample_app/.idea/untitled.iml" filepath="$PROJECT_DIR$/../sample_app/.idea/untitled.iml" />
     </modules>
   </component>
 </project>
