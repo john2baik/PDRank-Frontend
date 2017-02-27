@@ -21,9 +21,9 @@
 .byebug_history
 
 Would skip repository JamSesh2/
-db/migrate/
 
 # Personal ignorances
 .idea/
 /app/assets/images/*
 
+db/development.sqlite3
