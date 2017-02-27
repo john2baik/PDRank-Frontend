@@ -16,6 +16,15 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+.idea/*
 
 # Ignore Byebug command history file.
 .byebug_history
+
+Would skip repository JamSesh2/
+db/migrate/
+
+# Personal ignorances
+.idea/*
+/app/assets/images/*
+
