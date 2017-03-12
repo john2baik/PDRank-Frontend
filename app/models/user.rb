@@ -6,7 +6,6 @@ class User < ApplicationRecord
             format: {with: VALID_EMAIL_REGEX},
             uniqueness: {case_sensitive:false}
   has_secure_password
-<<<<<<< HEAD
   validates :password, presence: true, length: { minimum: 6 }
 
   # Returns the hash digest of the given string.
@@ -15,7 +14,5 @@ class User < ApplicationRecord
         BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
   end
-=======
   validates :password, presence:true, length: {minimum: 6}
->>>>>>> master
 end
