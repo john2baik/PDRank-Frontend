@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href='//fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
     <title><%= full_title(yield(:title)) %></title>
   </head>
   <body>
@@ -14,15 +15,29 @@
       </h2>
       <%= link_to 'Sign up now!', signup_path, class: 'signup-btn btn btn-lg btn-primary' %>
     </div>
-
-    <div class = "home-page-about">
-
-    <h2>
-      Who Are We?
-    </h2>
-     <p>
-      We want to connect you to other local musicians who want to collaborate in creating the next band,</p>
+  <div class = "home-page-about container">
+    <h2> BREAK OUT YOUR MUSICAL CREATIVITY </h2>
+    <h3> Wherever - Whenever - Tune into Life</h3>
+    <div class="panel-group">
+    <div class = "panel panel-info">
+      <div class="panel-heading">Who Are We?</div>
+      <div class="panel-body">We are a team of developers who
+        want to connect you to other local musicians who want to collaborate in creating the next band</div>
+    <!--<h2>-->
+      <!--Who Are We?-->
+    <!--</h2>-->
+     <!--<p>-->
+      <!--We want to connect you to other local musicians who want to collaborate in creating the next band,-->
+     <!--</p>-->
     </div>
+      <div class = "panel panel-info">
+        <div class="panel-heading">What Do We Do?</div>
+        <div class="panel-body">Create a diverse community of musicians who want to enhance their musical tastes by
+          experimenting with new forms of music and connecting with like-minded people.</div>
+
+      </div>
+    </div>
+  </div>
 
   </body>
 </html>
