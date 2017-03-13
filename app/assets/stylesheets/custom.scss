@@ -19,11 +19,16 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
+label{
+  color: white;
+}
+
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  color: white;
 }
 
 h2 {
@@ -141,7 +146,7 @@ p {
 }
 
 .signup-btn {
-  color: whitesmoke;
+  color: white;
 }
 
 // background image
@@ -243,4 +248,20 @@ footer {
       margin-left: 15px;
     }
   }
+}
+
+/*----------------Login_Page---------*/
+.login-link{
+  .row
+  h1{
+    color: white;
+    font-size: 3em;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+.home-page-about{
+  
 }

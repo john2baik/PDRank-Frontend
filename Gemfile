@@ -28,6 +28,9 @@ gem 'rails_12factor', group: :production
 # Use bcrypt to get secure/hashed passwords
 gem 'bcrypt'
 
+# Use Omniauth for facebook logins
+gem 'omniauth'
+gem 'omniauth-facebook', '1.4.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
