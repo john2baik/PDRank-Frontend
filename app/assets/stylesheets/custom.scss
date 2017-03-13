@@ -143,11 +143,12 @@ p {
       letter-spacing: 0.225em;
     }
   }
+  .signup-btn {
+    color:white;
+  }
 }
 
-.signup-btn {
-  color: white;
-}
+
 
 // background image
 #background-image {
@@ -263,5 +264,15 @@ footer {
 }
 
 .home-page-about{
-  
+  h2 {
+    font-size: 30px;
+    font-family: Verdana, Geneva, sans-serif;
+  }
+
+  h3 {
+    color: whitesmoke;
+    text-align: center;
+    font-family: 'Sofia';
+    font-size: 25px;
+  }
 }
