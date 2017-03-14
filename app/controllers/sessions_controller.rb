@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
 
       #log the person in if it matches the user email and password with the sessions
     else #when the user is not a valid match in the database
-      flash.now[:danger] = "Invalid Username/Password! Try again, fool."
+      flash.now[:danger] = "Invalid Username/Password! Fixing this bug soon."
       render 'new'
     end
   end
