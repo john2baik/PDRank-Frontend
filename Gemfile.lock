@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/tcocca/acts_as_follower.git
+  revision: c5ac7b9601c4af01eb4d9112330b27be4d694ecc
+  branch: master
+  specs:
+    acts_as_follower (0.2.1)
+      activerecord (>= 4.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -48,6 +56,10 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.3)
     byebug (9.0.6)
+    carrierwave (1.0.0)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     coderay (1.1.1)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
@@ -58,6 +70,12 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.4)
     debug_inspector (0.0.2)
+    devise (4.2.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 5.1)
+      responders
+      warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.7.0)
     faraday (0.11.0)
@@ -79,6 +97,8 @@ GEM
     guard-minitest (2.4.6)
       guard-compat (~> 1.2)
       minitest (>= 3.0)
+    haml (4.0.7)
+      tilt
     hashie (3.5.5)
     httpauth (0.2.1)
     i18n (0.8.0)
@@ -129,6 +149,7 @@ GEM
     omniauth-oauth2 (1.0.2)
       oauth2 (~> 0.6.0)
       omniauth (~> 1.0)
+    orm_adapter (0.5.0)
     pg (0.18.4)
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -174,6 +195,8 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
+    responders (2.3.0)
+      railties (>= 4.2.0, < 5.1)
     ruby-progressbar (1.8.1)
     sass (3.4.23)
     sass-rails (5.0.6)
@@ -207,6 +230,8 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.0.4)
       execjs (>= 0.3.0, < 3)
+    warden (1.2.7)
+      rack (>= 1.0)
     web-console (3.4.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -220,12 +245,16 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_follower!
   bcrypt
   bootstrap-sass (= 3.3.6)
   byebug
+  carrierwave (~> 1.0)
   coffee-rails (~> 4.2)
+  devise
   guard
   guard-minitest
+  haml
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
