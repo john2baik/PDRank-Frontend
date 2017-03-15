@@ -11,6 +11,9 @@ section {
   overflow: auto;
 }
 
+label{
+  color: black;
+}
 textarea {
   resize: vertical;
 }
@@ -19,9 +22,8 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
-label{
-  color: white;
-}
+
+
 
 h1 {
   font-size: 3em;
@@ -37,12 +39,33 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $gray-light;
+  color: black;
 }
 
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+}
+
+/* ----------------------------- form ----------------------------- */
+
+
+
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+    color: white;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+  color: white;
 }
 
 /* ----------------------------- home ----------------------------- */
@@ -260,6 +283,9 @@ footer {
     letter-spacing: -2px;
     margin-bottom: 30px;
     text-align: center;
+  }
+  h2{
+    color: white
   }
 }
 

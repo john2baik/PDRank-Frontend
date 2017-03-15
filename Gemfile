@@ -22,6 +22,14 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+gem 'haml'
+# for users to follow other users
+gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
+
+# allows for different login forms
+gem 'devise'
+# allows for uploading pictures to profile
+gem 'carrierwave', '~> 1.0'
 
 gem 'rails_12factor', group: :production
 
