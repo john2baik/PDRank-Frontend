@@ -19,7 +19,24 @@
         <%= f.label :password_confirmation, "Retype Password" %>
         <%= f.password_field :password_confirmation, class: 'form-control' %>
 
+        <%= f.label :age %>
+        <%= f.text_field :age, class: 'form-control'%>
+
+        <%= f.label :location %>
+        <%= f.text_field :location, class: 'form-control'%>
+
+        <%= f.label :sex %>
+        <%= f.text_field :sex, class: 'form-control'%>
+
+        <%= f.label :profession %>
+        <%= f.text_field :profession, class: 'form-control'%>
+
+        <%= f.label :bio %>
+        <%= f.text_field :bio, class: 'form-control'%>
+
+
         <%= f.submit "Create account", class: "btn btn-primary" %>
     <% end %>
+
   </div>
 </div>
