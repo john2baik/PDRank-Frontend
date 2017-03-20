@@ -26,7 +26,7 @@ gem 'haml'
 # for users to follow other users
 gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
 
-gem 'gravastic'
+# gem 'gravastic'
 
 # allows for different login forms
 gem 'devise'
@@ -36,7 +36,7 @@ gem 'carrierwave', '~> 1.0'
 gem 'rails_12factor', group: :production
 
 # Use bcrypt to get secure/hashed passwords
-gem 'bcrypt'
+gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 
 # Use Omniauth for facebook logins
 gem 'omniauth'
