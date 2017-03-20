@@ -26,6 +26,5 @@ Would skip repository JamSesh2/
 # Personal ignorances
 .idea/*
 /.idea
-/app/assets/images/*
 
 db/development.sqlite3

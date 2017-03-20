@@ -26,6 +26,8 @@ gem 'haml'
 # for users to follow other users
 gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
 
+gem 'gravastic'
+
 # allows for different login forms
 gem 'devise'
 # allows for uploading pictures to profile
