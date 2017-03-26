@@ -2,6 +2,18 @@
 
 <!DOCTYPE html>
 <html>
+<% if logged_in? %>
+    <div class="row">
+      <aside class="col-md-4">
+        <section class="user_info">
+          <%= render 'shared/user_info' %>
+        </section>
+        <section class="micropost_form">
+          <%= render 'shared/microposts_form' %>
+        </section>
+      </aside>
+    </div>
+<% else %>
   <head>
     <link href='//fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
     <title><%= full_title(yield(:title)) %></title>
@@ -21,7 +33,6 @@
     <h1>
       /n
     </h1>
-    <h2> CUTTING EDGE OF MEDICAL TREATMENT ON THE GO </h2>
     <h3> </h3>
     <div class="panel-group">
     <div class = "panel panel-info">
@@ -42,6 +53,6 @@
       </div>
     </div>
   </div>
-
+<%end%>
   </body>
 </html>

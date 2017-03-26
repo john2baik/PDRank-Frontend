@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 
   post 'signup', to: 'users#create'
 
+  get '/edit', to: 'users#edit'
+
   get '/login', to: 'sessions#new'
 
   post '/login', to: 'sessions#create'
@@ -24,5 +26,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   resources :users
+
+  resources :microposts,          only: [:create, :destroy]
 
 end

@@ -25,6 +25,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'haml'
 # for users to follow other users
 gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
+# for pagination
+gem 'will_paginate', '~> 3.1.0'
 
 # gem 'gravastic'
 
