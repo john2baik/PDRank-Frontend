@@ -11,10 +11,14 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6 }
   acts_as_follower
   acts_as_followable
+  has_many :microposts, dependent: :destroy
   has_many :documents
   mount_uploader :avatar, AvatarUploader #allows for uploading profile images to avatar
 
 
+  def feed
+    Micropost.where("user_id = ?", id)
+  end
   # Returns the hash digest of the given string.
     def self.digest(string)
       cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
