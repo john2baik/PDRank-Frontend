@@ -8,7 +8,7 @@ class User < ApplicationRecord
             format: {with: VALID_EMAIL_REGEX},
             uniqueness: {case_sensitive:false}
   has_secure_password
-  validates :password, presence: true, length: { minimum: 6 }
+  validates :password, presence: true, length: { minimum: 6 },allow_nil: true
   acts_as_follower
   acts_as_followable
   has_many :documents
@@ -16,15 +16,15 @@ class User < ApplicationRecord
 
 
   # Returns the hash digest of the given string.
-    def self.digest(string)
-      cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
-          BCrypt::Engine.cost
-      BCrypt::Password.create(string, cost: cost)
-    end
+  def self.digest(string)
+    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
+        BCrypt::Engine.cost
+    BCrypt::Password.create(string, cost: cost)
+  end
 
-    def self.new_token
-      SecureRandom.urlsafe_base64
-    end
+  def self.new_token
+    SecureRandom.urlsafe_base64
+  end
 
   def remember
     self.remember_token = User.new_token
