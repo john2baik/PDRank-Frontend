@@ -28,6 +28,9 @@ gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
 # for pagination
 gem 'will_paginate', '~> 3.1.0'
 
+gem 'paperclip' , '~> 5.0.0'
+
+
 # gem 'gravastic'
 
 # allows for different login forms

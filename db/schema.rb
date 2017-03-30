@@ -10,16 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170319221355) do
+ActiveRecord::Schema.define(version: 20170330022243) do
 
   create_table "documents", force: :cascade do |t|
-    t.string   "documentName"
     t.string   "author"
     t.text     "body"
-    t.datetime "documentCreationDate"
     t.integer  "user_id"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "document_file_name"
+    t.string   "document_content_type"
+    t.integer  "document_file_size"
+    t.dateteme "document_updated_at"
     t.index ["user_id", "created_at"], name: "index_documents_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_documents_on_user_id"
   end
