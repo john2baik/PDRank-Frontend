@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  require 'carrierwave/orm/activerecord'
 
   attr_accessor :remember_token
   before_save {email.downcase!}
@@ -14,7 +15,8 @@ class User < ApplicationRecord
   has_many :microposts, dependent: :destroy
   has_many :documents
   mount_uploader :avatar, AvatarUploader #allows for uploading profile images to avatar
-
+  mount_uploader :image, ImageUploader
+  mount_uploader :document, DocumentUploader
 
   def feed
     Micropost.where("user_id = ?", id)
