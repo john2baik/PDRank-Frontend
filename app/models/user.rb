@@ -13,7 +13,7 @@ class User < ApplicationRecord
   acts_as_follower
   acts_as_followable
   has_many :microposts, dependent: :destroy
-  has_many :documents
+  has_many :documents, dependent: :destroy
   mount_uploader :avatar, AvatarUploader #allows for uploading profile images to avatar
   mount_uploader :image, ImageUploader
   mount_uploader :document, DocumentUploader
