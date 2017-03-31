@@ -178,6 +178,7 @@ p {
 
 
 
+
 // background image
 #background-image {
   filter: brightness(50%);
@@ -357,3 +358,23 @@ span.picture {
     border: 0;
   }
 }
+
+div.floating-box{
+  float: left;
+  margin: 10px;
+  width:33vw;
+  #face{
+    display: block;
+    width: 30vw;
+    height: 30vw;
+    border-radius:50%;
+    margin-left: auto;
+    margin-right:auto;
+  }
+  member{
+    display: block;
+    text-align:center;
+  }
+
+}
+
