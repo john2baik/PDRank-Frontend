@@ -9,7 +9,6 @@
         <%= @user.name %>
       </h1>
       <%= link_to 'Edit Profile', edit_path, class: 'btn btn-lg btn-primary' %>
-
     </section>
   </aside>
   <div class="col-md-8">
@@ -22,9 +21,14 @@
     <% end %>
   </div>
 
+  <%= form_tag(documents_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search PDF Documents" %>
+      <%= submit_tag "Search", :name => nil %>
+  <% end %>
+
   <div class=""col-md-8">
     <% if @user.documents.any? %>
-      <h3>Documents (<%= user.documents.count %></h3>
+      <h3>(<%= @user.documents.count %>) Documents </h3>
       <ol class="documents">
         <%= render @documents %>
       </ol>
