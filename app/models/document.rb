@@ -6,6 +6,9 @@ class Document < ApplicationRecord
 
 
   def self.search(search)
-    where ("document_file_name ILIKE ? OR author ILIKE ? OR body ILIKE ?", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
+    where("document_file_name LIKE ?" , "%#{search}%")
+    where("author LIKE ?", "%#{search}%")
+    where("body LIKE ?", "%#{search}%")
+    where("date_of_document LIKE ?", "%#{search}%")
   end
 end

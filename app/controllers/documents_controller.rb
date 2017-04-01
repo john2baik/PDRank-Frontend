@@ -1,7 +1,7 @@
 class DocumentsController < ApplicationController
 
   def create
-
+    @document = current_user.documents.build(document_params)
   end
 
   def destroy
@@ -15,5 +15,11 @@ class DocumentsController < ApplicationController
     else
       @documents = Document.all.order("created_at DESC")
     end
+  end
+
+  private
+
+  def micropost_params
+    params.require(:document)
   end
 end
