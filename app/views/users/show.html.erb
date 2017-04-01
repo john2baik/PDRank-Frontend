@@ -11,9 +11,10 @@
       <%= link_to 'Edit Profile', edit_path, class: 'btn btn-lg btn-primary' %>
     </section>
   </aside>
+
   <div class="col-md-8">
     <% if @user.microposts.any? %>
-        <h3>Posts (<%= @user.microposts.count %>)</h3>
+        <h3> <%= @user.microposts.count %> Posts so far by <%= @user.name %></h3>
         <ol class="microposts">
           <%= render @microposts %>
         </ol>
@@ -21,10 +22,7 @@
     <% end %>
   </div>
 
-  <%= form_tag(documents_path, :method => "get", id: "search-form") do %>
-      <%= text_field_tag :search, params[:search], placeholder: "Search PDF Documents" %>
-      <%= submit_tag "Search", :name => nil %>
-  <% end %>
+
 
   <div class=""col-md-8">
     <% if @user.documents.any? %>

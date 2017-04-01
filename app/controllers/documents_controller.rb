@@ -1,7 +1,8 @@
 class DocumentsController < ApplicationController
 
   def create
-
+    @document = Document.new(document_params)
+    @document.
   end
 
   def destroy
@@ -15,5 +16,11 @@ class DocumentsController < ApplicationController
     else
       @documents = Document.all.order("created_at DESC")
     end
+  end
+
+  private
+
+  def document_params
+    params.require(:document).permit(:file)
   end
 end

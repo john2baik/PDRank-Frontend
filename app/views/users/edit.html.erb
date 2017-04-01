@@ -18,7 +18,10 @@
 
         <%= f.label :password_confirmation, "Confirmation" %>
         <%= f.password_field :password_confirmation, class: 'form-control' %>
-
+        </br>
+        <%= f.label :avatar, "Upload your own avatar picture" %>
+        <%= f.file_field :avatar %>
+        </br>
 
         <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>
