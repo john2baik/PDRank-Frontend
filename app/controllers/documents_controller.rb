@@ -1,7 +1,8 @@
 class DocumentsController < ApplicationController
 
   def create
-    @document = current_user.documents.build(document_params)
+    @document = Document.new(document_params)
+    @document.
   end
 
   def destroy
@@ -19,7 +20,7 @@ class DocumentsController < ApplicationController
 
   private
 
-  def micropost_params
-    params.require(:document)
+  def document_params
+    params.require(:document).permit(:file)
   end
 end
