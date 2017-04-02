@@ -28,3 +28,22 @@ Would skip repository JamSesh2/
 /.idea
 
 db/development.sqlite3
+.idea/runConfigurations/Development__untitled.xml
+Gemfile
+Gemfile.lock
+db/development.sqlite3
+Gemfile.lock
+db/development.sqlite3
+.idea/runConfigurations/Development__untitled.xml
+.idea/runConfigurations/Development__untitled.xml
+db/development.sqlite3
+*.sqlite3
+app/views/static_pages/aboutus.html.erb
+.idea/runConfigurations/Development__untitled.xml
+db/development.sqlite3
+db/development.sqlite3
+.idea/runConfigurations/Development__untitled.xml
+*.sqlite3
+db/development.sqlite3
+db/development.sqlite3
+.idea/runConfigurations/Production__untitled.xml
