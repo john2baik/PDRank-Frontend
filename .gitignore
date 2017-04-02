@@ -28,3 +28,5 @@ Would skip repository JamSesh2/
 /.idea
 
 db/development.sqlite3
+app/views/static_pages/aboutus.html.erb
+db/development.sqlite3
