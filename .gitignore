@@ -27,10 +27,15 @@ Would skip repository JamSesh2/
 .idea/*
 /.idea
 
+.idea/runConfigurations/Development__untitled.xml
+Gemfile
+Gemfile.lock
+Gemfile.lock
+.idea/runConfigurations/Development__untitled.xml
+*.sqlite3
+app/views/static_pages/aboutus.html.erb
+
+*.sqlite3
+
+.idea/runConfigurations/Production__untitled.xml
 db/development.sqlite3
-
-public/system/users/avatars/000/000/003/original/IMG_0402.JPG
-
-public/system/users/avatars/000/000/003/square/IMG_0402.JPG
-public/documents/
-public/system/
