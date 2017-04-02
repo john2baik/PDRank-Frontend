@@ -4,7 +4,6 @@ class Document < ApplicationRecord
   validates :content, presence: true
   has_attached_file :document, styles: {thumbnail: "60x60#"}
   validates_attachment :document, content_type: {content_type: "application/pdf"}
-  validates_something_else
 
 
   def self.search(search)

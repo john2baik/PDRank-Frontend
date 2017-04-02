@@ -6,15 +6,16 @@
     <section class="user_info">
       <h1>
         <%= gravatar_for @user %>
+        <%= avatar_for @user %>
         <%= @user.name %>
       </h1>
-      <%= link_to 'Edit Profile', edit_path, class: 'btn btn-lg btn-primary' %>
+      <%= link_to 'Edit Profile', edit_user_path(@user), class: 'btn btn-lg btn-primary' %>
     </section>
   </aside>
 
   <div class="col-md-8">
     <% if @user.microposts.any? %>
-        <h3> <%= @user.microposts.count %> Posts so far by <%= @user.name %></h3>
+        <h3><%= @user.microposts.count %> Posts so far by <%= @user.name %></h3>
         <ol class="microposts">
           <%= render @microposts %>
         </ol>

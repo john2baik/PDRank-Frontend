@@ -21,11 +21,15 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    if @user.save
+      flash[:success] = "Saved new changes!"
+      redirect_to @user
+    end
   end
 
   private
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation, :avatar)
     end
 
 

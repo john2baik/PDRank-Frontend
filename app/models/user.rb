@@ -14,9 +14,17 @@ class User < ApplicationRecord
   acts_as_followable
   has_many :microposts, dependent: :destroy
   has_many :documents, dependent: :destroy
-  mount_uploader :avatar, AvatarUploader #allows for uploading profile images to avatar
   mount_uploader :image, ImageUploader
   mount_uploader :document, DocumentUploader
+
+  has_attached_file :avatar , styles: {
+      thumb: '100x100>',
+      square: '200x200#',
+      medium: '300x300>'
+  }
+
+  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+
 
   def feed
     Micropost.where("user_id = ?", id)

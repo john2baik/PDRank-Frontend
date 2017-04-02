@@ -27,6 +27,20 @@ Would skip repository JamSesh2/
 .idea/*
 /.idea
 
+<<<<<<< HEAD
+.idea/runConfigurations/Development__untitled.xml
+Gemfile
+Gemfile.lock
+Gemfile.lock
+.idea/runConfigurations/Development__untitled.xml
+*.sqlite3
+app/views/static_pages/aboutus.html.erb
+
+*.sqlite3
+
+.idea/runConfigurations/Production__untitled.xml
+db/development.sqlite3
+=======
 db/development.sqlite3
 .idea/runConfigurations/Development__untitled.xml
 Gemfile
@@ -47,3 +61,4 @@ db/development.sqlite3
 db/development.sqlite3
 db/development.sqlite3
 .idea/runConfigurations/Production__untitled.xml
+>>>>>>> master
