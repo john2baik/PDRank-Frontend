@@ -169,6 +169,28 @@ p {
   .signup-btn {
     color:white;
   }
+
+  #frontpagepic{
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius:50%;
+    margin-left: auto;
+    margin-right:auto;
+  }
+
+  h3{
+    color: dimgrey;
+    letter-spacing: 0.225em;
+    font-family: "Arial Black", sans-serif;
+    text-transform: uppercase;
+  }
+  p1{
+    color: black;
+    letter-spacing: 0.225em;
+    font-family: "Arial Black", sans-serif;
+    text-transform: uppercase;
+  }
 }
 
 #logo{
@@ -375,4 +397,14 @@ div.floating-box{
     text-align:center;
   }
 
+}
+
+.panel-group{
+  position: absolute;
+  margin: 0 auto;
+  display: block;
+  width:100%;
+  .panel-info{
+    border:1px solid green;
+  }
 }
