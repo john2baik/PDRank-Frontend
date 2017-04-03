@@ -55,8 +55,8 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
 
-  config.paperclip.defaults = {
-      :storage => :s3,
-      :bucket => 'pdrank'
-  }
+  #config.paperclip.defaults = {
+  #    :storage => :s3,
+  #    :bucket => 'pdrank'
+  #}
 end
