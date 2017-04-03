@@ -2,27 +2,41 @@
 
 <!DOCTYPE html>
 <html>
+<% if logged_in? %>
+    <div class="row">
+      <aside class="col-md-4">
+        <section class="user_info">
+          <%= render 'shared/user_info' %>
+        </section>
+        <section class="micropost_form">
+          <%= render 'shared/microposts_form' %>
+        </section>
+      </aside>
+    </div>
+<% else %>
   <head>
     <link href='//fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
     <title><%= full_title(yield(:title)) %></title>
   </head>
   <body>
-    <img src="/assets/band.jpg" id="background-image" />
+    <img src="/assets/library.jpg" id="background-image" /><br>
     <div class=" center jumbotron">
-      <h1>Jam Sesh</h1>
+      <img src="/assets/PDRankLogo.jpg" id ="logo" />
+      <h1>PDRank</h1>
       <h2>
-        Find Local Artists to Collaborate
+        Ranking your PDF files in order of significance to your research needs. Upload your own choice of PDFs, or we can search them for you.
       </h2>
       <%= link_to 'Sign up now!', signup_path, class: 'signup-btn btn btn-lg btn-primary' %>
     </div>
-  <div class = "home-page-about container">
-    <h2> BREAK OUT YOUR MUSICAL CREATIVITY </h2>
-    <h3> Wherever - Whenever - Tune into Life</h3>
+  <div class = "home-page-about container"><br>
+    <p>&nbsp;</p>
+    <h3> </h3>
     <div class="panel-group">
     <div class = "panel panel-info">
-      <div class="panel-heading">Who Are We?</div>
-      <div class="panel-body">We are a team of developers who
-        want to connect you to other local musicians who want to collaborate in creating the next band</div>
+      <div class="panel-heading">What is this?</div>
+      <div class="panel-body">PDRank is a multi-platform app that helps professionals have a quick way of querying for keywords and receive a quick insight from many relevant PDF documents. In this way, this website will provide them with easy to search details
+        about the latest treatments for patients with a certain set of conditions, no longer requiring the
+        most experienced doctors to have to continuously read papers to stay up to date.</div>
     <!--<h2>-->
       <!--Who Are We?-->
     <!--</h2>-->
@@ -32,12 +46,10 @@
     </div>
       <div class = "panel panel-info">
         <div class="panel-heading">What Do We Do?</div>
-        <div class="panel-body">Create a diverse community of musicians who want to enhance their musical tastes by
-          experimenting with new forms of music and connecting with like-minded people.</div>
-
+        <div class="panel-body">Provide a platform where students and other professionals can quickly mine the data from a list of PDF files aquired.</div>
       </div>
     </div>
   </div>
-
+<%end%>
   </body>
 </html>
