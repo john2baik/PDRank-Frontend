@@ -21,6 +21,9 @@
         <%= f.label :password_confirmation, "Retype Password" %>
         <%= f.password_field :password_confirmation, class: 'form-control' %>
 
+        <%= f.label :avatar, "Upload an Avatar Picture" %>
+        <%= f.file_field :avatar %>
+
         <%= f.submit "Create account", class: "btn btn-primary" %>
     <% end %>
 
