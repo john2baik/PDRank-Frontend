@@ -9,7 +9,8 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use PostgreSQL for deployment
+#gem 'pg', group: production
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -20,6 +21,32 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+gem 'haml'
+# for users to follow other users
+gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
+# for pagination
+gem 'will_paginate', '~> 3.1.0'
+
+gem 'paperclip' , '~> 5.0.0'
+
+gem 'aws-sdk', '<2.0'
+
+
+# gem 'gravastic'
+
+# allows for different login forms
+gem 'devise'
+# allows for uploading pictures to profile
+gem 'carrierwave', '~> 1.0'
+
+gem 'rails_12factor', group: :production
+
+# Use bcrypt to get secure/hashed passwords
+gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
+
+# Use Omniauth for facebook logins
+gem 'omniauth'
+gem 'omniauth-facebook', '1.4.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -29,8 +56,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+
 
 # Use Bootstrap to generate a responsive web page
 gem 'bootstrap-sass', '3.3.6'
@@ -41,6 +67,7 @@ gem 'bootstrap-sass', '3.3.6'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'sqlite3' #group: development
 end
 
 group :development do

@@ -10,46 +10,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170215053153) do
+ActiveRecord::Schema.define(version: 20170401185532) do
 
-  create_table "static_pages", force: :cascade do |t|
-    t.string   "home"
-    t.string   "help"
+  create_table "documents", force: :cascade do |t|
+    t.string   "author"
+    t.text     "body"
+    t.integer  "user_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.datetime "date_of_document"
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
+    t.index ["user_id", "created_at"], name: "index_documents_on_user_id_and_created_at"
+    t.index ["user_id"], name: "index_documents_on_user_id"
+  end
+
+  create_table "microposts", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
+    t.index ["user_id"], name: "index_microposts_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.integer "user_id",                          null:false
-    t.integer "age"
-    t.text "location"
-    t.text "name",                                null:false
-    t.text "phone_number"
-    t.integer "rating"
-    t.text "user_bio"
-    t.text "instrument"
-    t.text "level"
-  end
-
-  create_table "jam_sessions", force: :cascade do |t|
-    t.integer "jam_sessions_id",                  null: false
-    t.integer "init_user_id",                     null: false
-    t.integer "part_user_id",                     null: false
-    t.datetime "sesh_time",                       null: false
-  end
-
-  create_table "genres", force: :cascade do |t|
     t.string   "name"
-    #t.datetime "created_at",                      null: false
-    #t.datetime "updated_at",                      null: false
+    t.string   "email"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "password_digest"
+    t.string   "remember_digest"
+    t.text     "bio"
+    t.integer  "age"
+    t.string   "location"
+    t.string   "sex"
+    t.string   "profession"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
-
-  create_table "friends", force: :cascade do |t|
-    t.integer  "friendable_id",                   null: false
-    t.integer  "friender_id",                     null: false
-    t.boolean  "blocked",         default: false, null: false
-  end
-
-  add_index "friends", ["friendable_id","friender_id"], name: "friender friends friendable", using: :btree
 
 end

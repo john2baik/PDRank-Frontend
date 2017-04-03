@@ -1,10 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-// variables
-$gray-medium-light: #eaeaea;
-
-// general
+/* ----------------------------- general ----------------------------- */
 
 body {
   padding-top: 60px;
@@ -14,26 +11,27 @@ section {
   overflow: auto;
 }
 
+label{
+  color: black;
+}
 textarea {
   resize: vertical;
-}
-
-.center {
-  text-align: center;
-  h1 {
-    margin-bottom: 10px;
-  }
 }
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
+
+
+
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  color: black;
+  font-style: italic;
 }
 
 h2 {
@@ -42,7 +40,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $gray-light;
+  color: black;
 }
 
 p {
@@ -50,10 +48,145 @@ p {
   line-height: 1.7em;
 }
 
-// background image
+/* ----------------------------- form ----------------------------- */
 
+
+
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+    color: white;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+  color: white;
+}
+
+/* ----------------------------- home ----------------------------- */
+
+// center area
+.center {
+  background-color: transparent;
+  color: whitesmoke;
+
+  text-align: center;
+
+  margin: 100px;
+
+  opacity: 0.7;
+
+  transition: opacity 0.85s linear;
+  transition-delay: 0.25s;
+
+  h1 {
+    position: relative;
+
+    -webkit-animation: inc_spacing 2s;
+    animation: inc_spacing 2s;
+
+    margin-bottom: 10px;
+    display: inline-block;
+
+    padding: 0.35em 1em;
+
+    line-height: 1.75em;
+
+    letter-spacing: 0.225em;
+
+    font-family: "Arial Black", sans-serif;
+    text-transform: uppercase;
+
+    &:before {
+      position: relative;
+
+      -webkit-animation: draw_line 2s;
+      animation: draw_line 2s;
+
+      display: block;
+
+      background-color: whitesmoke;
+      content: '';
+
+      margin: auto;
+
+      width: 100%;
+      height: 2px;
+    }
+
+    &:after {
+      position: relative;
+
+      -webkit-animation: draw_line 2s;
+      animation: draw_line 2s;
+
+      display: block;
+
+      background-color: whitesmoke;
+      content: '';
+
+      margin: auto;
+
+      width: 100%;
+      height: 2px;
+    }
+
+    @-webkit-keyframes draw_line {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 100%;
+      }
+    }
+  }
+
+  h2 {
+    position: relative;
+
+    color: whitesmoke;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  @-webkit-keyframes inc_spacing {
+    from {
+      letter-spacing: 0em;
+    }
+
+    to {
+      letter-spacing: 0.225em;
+    }
+  }
+  .signup-btn {
+    color:white;
+  }
+}
+
+#logo{
+  width: 20%;
+  height: 20%;
+}
+
+
+
+// background image
 #background-image {
+  filter: brightness(50%);
+
   position: absolute;
+
+  -webkit-animation: fadein 2s;
+  animation: fadein 2s;
 
   width: 100%;
   height: 100%;
@@ -61,11 +194,24 @@ p {
   top: 0;
   left: 0;
 
-  opacity: 0.7;
+  opacity: 0.6;
   z-index: -1;
 }
 
-// header
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.6;
+  }
+}
+
+/* ----------------------------- header ----------------------------- */
+.navbar{
+  color: darkgoldenrod;
+}
 
 .logo-link {
   float: left;
@@ -88,33 +234,147 @@ p {
   margin-left: -20px;
 }
 
-#JamSesh-logo-image {
+#PDRank-logo-image {
   width: 40px;
   height: 40px;
 }
 
-// footer
+/* ----------------------------- footer ----------------------------- */
 
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
-  a {
-    color: $gray;
+  border-top: 1px solid whitesmoke;
+  color: whitesmoke;
+
+  .page-link {
     &:hover {
-      color: $gray-darker;
+      background-color: transparent;
+      color: lightsteelblue;
     }
   }
+
+  a {
+    color: whitesmoke;
+
+    &:hover {
+      background-color: transparent;
+      color: lightsteelblue;
+    }
+
+    &:visited {
+      background-color: transparent;
+      color: whitesmoke;
+    }
+  }
+
   small {
     float: left;
   }
+
   ul {
     float: right;
     list-style: none;
+
     li {
       float: left;
       margin-left: 15px;
     }
   }
 }
+
+/*----------------Login_Page---------*/
+.login-link{
+  .row
+  h1{
+    color: white;
+    font-size: 3em;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  h2{
+    color: white
+  }
+}
+
+.home-page-about{
+  h2 {
+    font-size: 30px;
+    font-family: Verdana, Geneva, sans-serif;
+  }
+
+  h3 {
+    color: black;
+    text-align: center;
+    font-family: 'Sofia';
+    font-size: 25px;
+  }
+
+}
+
+/* ---------------------aboutpage--------------- */
+div.floating-box{
+  float: left;
+  margin: 100px;
+  width: 100px;
+  #face{
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius:75%;
+    margin-left: auto;
+    margin-right:auto;
+  }
+  member{
+    display: block;
+    text-align:center;
+  }
+}
+
+/* ----------------------------- microposts ----------------------------- */
+.microposts {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
+}
+

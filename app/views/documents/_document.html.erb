@@ -1,0 +1,4 @@
+<%= form_tag(documents_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search PDF Documents by Content or Date" %>
+    <%= submit_tag "Search"%>
+<% end %>
