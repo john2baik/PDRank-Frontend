@@ -27,7 +27,7 @@ gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
 # for pagination
 gem 'will_paginate', '~> 3.1.0'
 
-gem 'paperclip' , '~> 5.0.0'
+gem 'paperclip'
 
 gem 'aws-sdk', '<2.0'
 
@@ -56,6 +56,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
+
+gem 'envyable'
 
 
 # Use Bootstrap to generate a responsive web page

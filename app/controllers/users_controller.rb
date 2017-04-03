@@ -15,7 +15,7 @@ class UsersController < ApplicationController
       log_in @user
       redirect_to @user
     else
-    render 'new'
+      render 'new'
     end
   end
 

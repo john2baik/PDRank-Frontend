@@ -2,7 +2,7 @@ class Document < ApplicationRecord
   belongs_to :user
   validates :user_id, presence: true
   validates :content, presence: true
-  has_attached_file :document, styles: {thumbnail: "60x60#"}
+  has_attached_file :document,
   validates_attachment :document, content_type: {content_type: "application/pdf"}
 
 
@@ -12,4 +12,5 @@ class Document < ApplicationRecord
     where("body LIKE ?", "%#{search}%")
     where("date_of_document LIKE ?", "%#{search}%")
   end
+
 end
