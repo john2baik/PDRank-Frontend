@@ -57,6 +57,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 
+gem 'envyable'
+
 
 # Use Bootstrap to generate a responsive web page
 gem 'bootstrap-sass', '3.3.6'
