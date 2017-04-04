@@ -178,7 +178,22 @@ p {
 }
 
 
+#featuretteimages {
+  filter: brightness(100%);
+  position: absolute;
 
+  -webkit-animation: fadein 2s;
+  animation: fadein 2s;
+
+  width: 350px;
+  height: 350px;
+
+  top: 0;
+  left: 0;
+
+  opacity: 0.6;
+  z-index: -1;
+}
 // background image
 #background-image {
   filter: brightness(50%);
