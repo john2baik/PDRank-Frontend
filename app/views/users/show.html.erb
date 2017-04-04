@@ -1,38 +1,51 @@
 <% provide(:title, @user.name) %>
 <img src="/assets/bluebackground.jpg" id="background-image2" />
 
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= avatar_for @user %>
-        <%= @user.name %>
-      </h1>
-      <%= link_to 'Edit Profile', edit_user_path(@user), class: 'btn btn-lg btn-primary' %>
-    </section>
-  </aside>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 col-sm-6">
 
-  <div class="col-md-8">
-    <% if @user.microposts.any? %>
-        <h3><%= @user.microposts.count %> Posts so far by <%= @user.name %></h3>
-        <ol class="microposts">
-          <%= render @microposts %>
-        </ol>
-        <%= will_paginate @microposts %>
-    <% end %>
+      <div class="card hovercard">
+        <div class="cardheader">
+
+        </div>
+        <div class="avatar">
+          <h1>
+            <%= gravatar_for @user %>
+            <%= @user.name %>
+          </h1>
+        </div>
+        <div class="info">
+          <div class="title">
+            <%= @user.name %>
+          </div>
+          <%= link_to 'Edit Profile', edit_path, class: 'btn btn-lg btn-primary' %>
+
+        </div>
+
+
+        <div class="col-md-8">
+          <% if @user.microposts.any? %>
+              <h3> <%= @user.microposts.count %> Posts so far by <%= @user.name %></h3>
+              <ol class="microposts">
+                <%= render @microposts %>
+              </ol>
+              <%= will_paginate @microposts %>
+          <% end %>
+        </div>
+
+        <div class="col-md-8">
+          <% if @user.documents.any? %>
+              <h3>(<%= @user.documents.count %>) Documents </h3>
+              <ol class="documents">
+                <%= render @documents %>
+              </ol>
+              <%= will_paginate @documents %>
+          <% end %>
+        </div>
+      </div>
+
+    </div>
+
   </div>
-
-
-
-  <div class=""col-md-8">
-    <% if @user.documents.any? %>
-      <h3>(<%= @user.documents.count %>) Documents </h3>
-      <ol class="documents">
-        <%= render @documents %>
-      </ol>
-      <%= will_paginate @documents %>
-    <% end %>
-  </div>
-
 </div>
