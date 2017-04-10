@@ -8,22 +8,45 @@
   <body>
     <h1><%= yield(:title) %></h1>
     <img src="/assets/pic.jpg" id ="background-image"/>
-    <p>
-      PDRank, let us help you find the documents you need.
-    </p>
+    <hr class="featurette-divider">
 
-    <p> We are PDRank, a group of developers that strive to find the latest and most effective treatments for patients
-    with a certain set of conditions, no longer requiring the most experienced doctors to have to continuously read papers
-    to stay up to date. </p>
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">What is this? <span class="text-muted">- Multi-platform app</span></h2>
+        <p class="lead">PDRank is a multi-platform app that helps professionals have a quick way of querying for keywords and receive a quick insight from many relevant PDF documents. In this way, this website will provide them with easy to search details
+          about the latest treatments for patients with a certain set of conditions, no longer requiring the
+          most experienced doctors to have to continuously read papers to stay up to date.</p>
+      </div>
+      <div class="col-md-5">
+        <img src="/assets/PDRankLogo" id="featuretteimages">
+      </div>
+    </div>
 
-    <p>
-      Please visit our <%= link_to 'home', root_path %>
-      page.
+    <hr class="featurette-divider">
 
-      For more help on this website, please visit our
-      <a href="home.html.erb">home</a>
-      page.
-    </p>
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">What do we do? <span class="text-muted">Help you find the documents you need.</span></h2>
+        <p class="lead">Provide a platform where students and other professionals can quickly mine the data from a list of PDF files acquired.</p>
+      </div>
+      <div class="col-md-5">
+        <img src="/assets/icon-what-we-do.png" id="featuretteimages">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Who are we? <span class="text-muted"></span></h2>
+        <p class="lead">We are PDRank, a group of developers that strive to find the latest and most effective treatments for patients
+          with a certain set of conditions, no longer requiring the most experienced doctors to have to continuously read papers
+          to stay up to date.</p>
+      </div>
+      <div class="col-md-5">
+        <img src="/assets/whoarewe.png" id="featuretteimages">
+      </div>
+    </div>
 
     <div class="floating-box">
       <img src="/assets/ethanprof.jpg" id ="face" />
@@ -51,6 +74,13 @@
       <member><b>Youyun Zheng</b></member>
       <br>
     </div>
+    <p>
+      Please visit our <%= link_to 'home', root_path %>
+      page.
 
+      For more help on this website, please visit our
+      <a href="home.html.erb">home</a>
+      page.
+    </p>
   </body>
 </html>
