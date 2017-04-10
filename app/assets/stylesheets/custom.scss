@@ -50,9 +50,6 @@ p {
 
 /* ----------------------------- form ----------------------------- */
 
-
-
-
 .checkbox {
   margin-top: -10px;
   margin-bottom: 10px;
@@ -172,19 +169,10 @@ p {
   }
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/remotes/origin/master
 #logo{
   width: 20%;
   height: 20%;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> refs/remotes/origin/master
-
 
 #featuretteimages {
   filter: brightness(100%);
@@ -323,33 +311,21 @@ footer {
 
 .home-page-about{
   h2 {
-<<<<<<< HEAD
-  color: black;
-  font-size: 30px;
-=======
     color: black;
     font-size: 30px;
->>>>>>> refs/remotes/origin/master
+    color: black;
+    font-size: 30px;
     font-family: Verdana, Geneva, sans-serif;
   }
 
   h3 {
-<<<<<<< HEAD
-  text-align: center;
-=======
     text-align: center;
->>>>>>> refs/remotes/origin/master
     font-size: 25px;
     font-family: 'Sofia';
-    font-size: 22px;
   }
 
-<<<<<<< HEAD
   h4 {
     color: black;
-=======
-  h1{color: black;
->>>>>>> refs/remotes/origin/master
     text-align: center;
     font-family: 'Sofia';
     font-size: 25px;
@@ -421,7 +397,7 @@ body {font-family: Verdana,sans-serif;margin:0}
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
+  color: darkblue;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
@@ -458,9 +434,10 @@ body {font-family: Verdana,sans-serif;margin:0}
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 9.5s;
+  -webkit-animation-duration: 2.5s;
   animation-name: fade;
-  animation-duration: 9.5s;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes fade {
@@ -517,9 +494,6 @@ span.picture {
   input {
     border: 0;
   }
-<<<<<<< HEAD
-}
-=======
 }
 
->>>>>>> refs/remotes/origin/master
+
