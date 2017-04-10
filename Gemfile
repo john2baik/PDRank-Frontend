@@ -27,7 +27,7 @@ gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
 # for pagination
 gem 'will_paginate', '~> 3.1.0'
 
-gem 'paperclip'
+gem 'paperclip', '4.3.6'
 
 gem 'aws-sdk', '<2.0'
 
