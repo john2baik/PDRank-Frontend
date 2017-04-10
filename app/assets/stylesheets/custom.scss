@@ -172,6 +172,7 @@ p {
   }
 }
 
+
 #logo{
   width: 20%;
   height: 20%;
@@ -315,12 +316,18 @@ footer {
 
 .home-page-about{
   h2 {
+    color: black;
     font-size: 30px;
     font-family: Verdana, Geneva, sans-serif;
   }
 
   h3 {
-    color: black;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Sofia';font-size: 22px;
+  }
+
+  h1{color: black;
     text-align: center;
     font-family: 'Sofia';
     font-size: 25px;
@@ -341,7 +348,7 @@ div.floating-box{
     margin-left: auto;
     margin-right:auto;
   }
-  member{
+  .member{
     display: block;
     text-align:center;
   }
