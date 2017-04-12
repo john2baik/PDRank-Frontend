@@ -18,6 +18,8 @@
         <div class="info">
           <div class="title">
             <%= @user.name %>
+            <%= @user.bio %>
+            <%= @user.institution %>
           </div>
           <%= link_to 'Edit Profile', edit_user_path, class: 'btn btn-lg btn-primary' %>
 
