@@ -86,6 +86,7 @@ group :test do
   gem 'minitest-reporters', '1.1.9'
   gem 'guard'
   gem 'guard-minitest'
+
 end
 
 group :production do
