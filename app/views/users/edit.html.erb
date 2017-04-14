@@ -19,6 +19,15 @@
         <%= f.label :institution %>
         <%= f.text_field :institution, class: 'form-control' %>
 
+        <%= f.label :profession %>
+        <%= f.text_field :profession , class: 'form-control' %>
+
+        <%= f.label :sex %>
+        <%= f.text_field :sex, class: 'form-control' %>
+
+        <%= f.label :age %>
+        <%= f.text_field :age, class: 'form-control' %>
+
         <%= f.label :password %>
         <%= f.password_field :password, class: 'form-control' %>
 
@@ -29,14 +38,17 @@
         <%= f.file_field :avatar %>
         </br>
 
+        <%# <div class="gravatar_edit">%>
+        <%#<%= gravatar_for @user %>
+        <%#<%= link_to 'Change Gravatar',"http://gravatar.com/emails", class: 'btn btn-primary' %>
+        <%#</div> %>
+
+        <br>
         <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>
 
 
 
-    <div class="gravatar_edit">
-      <%= gravatar_for @user %>
-      <a href="http://gravatar.com/emails" target="_blank">change</a>
-    </div>
+
   </div>
 </div>
