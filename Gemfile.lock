@@ -93,6 +93,8 @@ GEM
       thor (>= 0.18.1, < 2.0)
     erubis (2.7.0)
     execjs (2.7.0)
+    faker (1.4.2)
+      i18n (~> 0.5)
     faraday (0.11.0)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.17)
@@ -286,6 +288,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   envyable
+  faker
   guard
   guard-minitest
   haml

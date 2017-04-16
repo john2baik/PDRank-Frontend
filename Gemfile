@@ -62,6 +62,7 @@ gem 'envyable'
 
 # Use Bootstrap to generate a responsive web page
 gem 'bootstrap-sass', '3.3.6'
+gem 'faker'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
