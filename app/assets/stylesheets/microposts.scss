@@ -1,3 +1,27 @@
 // Place all the styles related to the Microposts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h7.center_micropost{
+  color: red;
+  text-align: center;
+  font-size: medium;
+}
+
+.center_micropost{
+  width:100%;
+  overflow: hidden;
+  color: white;
+
+}
+
+.col-md-8 > h1{
+  color: white;
+  text-align: left;
+}
+
+.field > h1{
+  color: white;
+  text-align: left;
+  font-size: medium;
+  width: 100%;
+}
