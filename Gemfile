@@ -63,6 +63,9 @@ gem 'envyable'
 # Use Bootstrap to generate a responsive web page
 gem 'bootstrap-sass', '3.3.6'
 
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+gem "faker"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -86,6 +89,7 @@ group :test do
   gem 'minitest-reporters', '1.1.9'
   gem 'guard'
   gem 'guard-minitest'
+
 end
 
 group :production do
