@@ -4,22 +4,93 @@
 <html>
 <head>
   <title><%= full_title(yield(:title)) %></title>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    </style>
+  </head>
 <body>
-<h1><%= yield(:title) %></h1>
-<p>
-  PDRank, get the latest help.
-</p>
 
-<p> We are PDRank, a group of developers that strive to find the latest and most effective treatments for patients
-  with a certain set of conditions, no longer requiring the most experienced doctors to have to continuously read papers
-  to stay up to date. </p>
+<div class="slideshow-container">
 
-<p>
-  Please visit our
-  <%= link_to 'home', root_path %>
-  page.
-  <br/>
-</p>
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 6</div>
+    <img src="/assets/doctors.png" style="width:100%">
+    <div class="text">Doctors need to be up to date.</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 6</div>
+    <img src="/assets/research.jpg" style="width:100%">
+    <div class="text">So Doctors research on their field. </div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 6</div>
+    <img src="/assets/medical guide.jpg" style="width:100%">
+    <div class="text">Looking at different sources. </div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 6</div>
+    <img src="/assets/treatment.jpeg" style="width:100%">
+    <div class="text">To find the best treatment. </div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 6</div>
+    <img src="/assets/pediatrician.jpg" style="width:100%">
+    <div class="text">To treat their patients well. </div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">6 / 6</div>
+    <img src="/assets/help.jpg" style="width:100%">
+    <div class="text">We are here to help bring all the sources together. To help doctors stay informed. </div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+</div>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+
 </body>
 </html>
