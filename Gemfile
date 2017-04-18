@@ -62,6 +62,7 @@ gem 'envyable'
 
 # Use Bootstrap to generate a responsive web page
 gem 'bootstrap-sass', '3.3.6'
+gem 'faker'
 
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 gem "faker"
