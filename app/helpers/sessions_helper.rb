@@ -18,7 +18,6 @@ module SessionsHelper
       user = User.find_by(id: user_id)
       if user && user.authenticated?(cookies[:remember_token])
         log_in user
-        params[:session][:remember_me] == '1' ? remember(user) : forget(user)
         @current_user = user
       end
     end
