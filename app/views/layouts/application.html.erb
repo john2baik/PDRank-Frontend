@@ -9,13 +9,19 @@
 
   <body>
     <%= render 'layouts/header' %>
+    <h1> Upload documents or posts here</h1>
     <div class="container">
       <% flash.each do |message_type, message| %>
           <div class="alert alert-<%= message_type %>"><%= message %></div>
       <% end %>
       <%= yield %>
-      <%= render 'layouts/footer' %>
     </div>
   </body>
+
+
+
+
+  <%= render 'layouts/footer' %>
+
 
 </html>

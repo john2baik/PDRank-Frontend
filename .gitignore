@@ -55,3 +55,5 @@ db/development.sqlite3
 
 # Don't check in credentials 
 config/env.yml
+# Ignore application configuration
+/config/application.yml

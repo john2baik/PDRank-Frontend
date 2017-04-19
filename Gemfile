@@ -31,6 +31,11 @@ gem 'paperclip', '4.3.6'
 
 gem 'aws-sdk', '<2.0'
 
+gem 'rmagick', '2.16.0'
+
+gem 'paperclip-ghostscript'
+
+
 
 # gem 'gravastic'
 
@@ -58,6 +63,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 
 gem 'envyable'
+
+gem 'figaro'
 
 
 # Use Bootstrap to generate a responsive web page
