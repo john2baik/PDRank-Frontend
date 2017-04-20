@@ -18,11 +18,12 @@
           </div>
           <div class="info">
             <div class="title">
-              <%= @user.bio %>
+              <h4>Biography: <%= @user.bio %></h4>
+
               <br>
-              <%= @user.institution %>
+              <h4>Institution: <%= @user.institution %> </h4>
               <br>
-              <%= @user.profession %>
+              <h4>Profession: <%= @user.profession %> </h4>
               <br>
             </div>
             <br>
@@ -31,6 +32,24 @@
           </div>
         </div>
 
+      </div>
+
+
+      <div>
+        <h5>Upload Document</h5>
+        <%= form_for Document.new do |f| %>
+            <div class="form-group">
+              <%= f.label :title %>
+              <%= f.text_field :file_file_name, class: 'form-control' %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :file %>
+              <%= f.file_field :document, class: 'form-control'%>
+            </div>
+
+            <%= f.submit 'Upload', class: 'btn btn-primary' %>
+        <% end %>
       </div>
 
       <div class="col-md-8" >
@@ -43,6 +62,7 @@
         <% end %>
       </div>
     </div>
+
     <div class="col-md-8" style="height: 100%">
       <% if @user.microposts.any? %>
           <h3>Microposts (<%= @user.microposts.count %>)</h3>

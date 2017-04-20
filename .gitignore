@@ -11,6 +11,7 @@
 
 /db/*.sqlite3-journal
 /db/*.sqlite3
+db/*.sqlite3
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -55,3 +56,5 @@ db/development.sqlite3
 
 # Don't check in credentials 
 config/env.yml
+# Ignore application configuration
+/config/application.yml
