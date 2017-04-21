@@ -2,7 +2,11 @@ class DocumentsController < ApplicationController
 
   def create
     @document = Document.new(document_params)
-    @document.
+    @document.save
+  end
+
+  def new
+    @docuemnt = Document.new(document_params)
   end
 
   def destroy

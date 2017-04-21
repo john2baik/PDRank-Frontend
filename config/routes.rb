@@ -27,8 +27,15 @@ Rails.application.routes.draw do
 
   delete '/logout', to: 'sessions#destroy'
 
+  get '/new', to: 'documents#new'
+
+  post '/show', to: 'document#show'
+
+
+
   resources :users
 
+  resources :documents, only: [:create, :destroy]
   resources :microposts,          only: [:create, :destroy]
 
 end
