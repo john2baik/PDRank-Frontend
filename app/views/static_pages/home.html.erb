@@ -3,12 +3,14 @@
 <!DOCTYPE html>
 <html>
 <% if logged_in? %>
+    <img src="/assets/library.jpg" id="background-image" /><br>
     <div class="row">
       <aside class="col-md-4">
         <section class="user_info">
           <%= render 'shared/user_info' %>
         </section>
-        <section class="micropost_form">
+        <br>
+        <section class="micropost_form" style="align-content: center">
           <%= render 'shared/microposts_form' %>
         </section>
       </aside>
