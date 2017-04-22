@@ -12,14 +12,15 @@
           </div>
           <div class="avatar">
             <h1>
-              <%= gravatar_for @user %>
+              <%= avatar_for @user %>
+              <br>
               <%= @user.name %>
             </h1>
           </div>
           <div class="info">
             <div class="title">
-              <h4>Biography: <%= @user.bio %></h4>
-
+              <h4>Biography: </h4>
+              <h6> <%= @user.bio %></h6>
               <br>
               <h4>Institution: <%= @user.institution %> </h4>
               <br>
@@ -45,7 +46,7 @@
 
             <div class="form-group">
               <%= f.label :file %>
-              <%= f.file_field :document, class: 'form-control'%>
+              <%= f.file_field :file, class: 'form-control'%>
             </div>
 
             <%= f.submit 'Upload', class: 'btn btn-primary' %>
@@ -62,6 +63,44 @@
         <% end %>
       </div>
     </div>
+
+    <div>
+      <style>
+        input[type=text] {
+          width: 400px;
+          box-sizing: border-box;
+          border: 2px solid #ccc;
+          border-radius: 4px;
+          font-size: 16px;
+          color: black;
+          background-color: white;
+          background-image: url('searchicon.png');
+          background-position: 10px 10px;
+          background-repeat: no-repeat;
+          padding: 12px 20px 12px 40px;
+          -webkit-transition: width 0.2s ease-in-out;
+          transition: width 0.4s ease-in-out;
+        }
+
+        input[type=text]:focus {
+          width: 60%;
+        }
+      </style>
+      <br>
+      <br>
+
+      <%= form_for @user do |f| %>
+          <div class="form-group">
+            <%= f.label "Search for Documents or Topics" %>
+            <%= f.text_field :search, class: 'input'%>
+          </div>
+
+          <%= f.submit 'Search', class: 'btn btn-primary' %>
+      <% end %>      <!--<form>-->
+        <!--<input type="text" name="search" placeholder="Search for a Topic or Document...">-->
+      <!--</form>-->
+    </div>
+
 
     <div class="col-md-8" style="height: 100%">
       <% if @user.microposts.any? %>

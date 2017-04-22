@@ -27,9 +27,9 @@ Rails.application.routes.draw do
 
   delete '/logout', to: 'sessions#destroy'
 
-  get '/new', to: 'documents#new'
+  get '/newdocument', to: 'documents#new'
 
-  post '/show', to: 'document#show'
+  post '/showdocument', to: 'document#show'
 
 
 
