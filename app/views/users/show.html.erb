@@ -89,17 +89,11 @@
       <br>
       <br>
 
-      <%= form_for @user do |f| %>
-          <div class="form-group">
-            <%= f.label "Search for Documents or Topics" %>
-            <%= f.text_field :search, class: 'input'%>
-          </div>
-
-          <%= f.submit 'Search', class: 'btn btn-primary' %>
-      <% end %>      <!--<form>-->
-        <!--<input type="text" name="search" placeholder="Search for a Topic or Document...">-->
-      <!--</form>-->
-    </div>
+      <%= form_tag(:action => "search") do %>
+          <%= label_tag(:search, "Search for Document or Topic") %>
+          <%= text_field_tag :search %>
+          <%= submit_tag("Submit") %>
+      <% end %>
 
 
     <div class="col-md-8" style="height: 100%">
