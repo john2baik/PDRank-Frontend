@@ -31,6 +31,8 @@ Rails.application.routes.draw do
 
   post '/showdocument', to: 'document#show'
 
+  post '/search', to: 'users#search'
+
 
 
   resources :users
