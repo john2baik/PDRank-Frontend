@@ -69,6 +69,7 @@
 
 
 
+
     <div class="col-md-8" style="height: 100%">
       <div>
         <style>
@@ -106,6 +107,13 @@
         <!--<input type="text" name="search" placeholder="Search for a Topic or Document...">-->
         <!--</form>-->
       </div>
+
+      <%= form_tag(:action => "search") do %>
+          <%= label_tag(:search, "Search for Document or Topic") %>
+          <%= text_field_tag :search %>
+          <%= submit_tag("Submit") %>
+      <% end %>
+
 
       <div class="slideshow-container">
 

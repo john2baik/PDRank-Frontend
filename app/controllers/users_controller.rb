@@ -38,9 +38,23 @@ class UsersController < ApplicationController
     end
   end
 
+  def search
+    require 'fileutils'
+    givenpath = "/Users/johnbaik/desktop/savedSearches/search.txt"
+    dir = File.dirname(givenpath)
+    unless File.directory?(dir)
+      FileUtils.mkdir_p(dir)
+    end
+    @query = params[:search].to_s
+    File.open(givenpath, "w+") do |f|
+      f.write(@query)
+    end
+    flash[:success] = "Search is processing in background..."
+  end
+
   private
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation, :avatar, :bio, :institution, :age, :sex, :profession)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation, :avatar, :bio, :institution, :age, :sex, :profession, :search)
     end
 
 
