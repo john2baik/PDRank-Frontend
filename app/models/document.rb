@@ -5,11 +5,11 @@ class Document < ApplicationRecord
   validates :content, presence: true
   #validates_attachment :document, content_type: {content_type: "application/pdf"}
   # show the first part of the pdf in a thumbnail jpg
-  has_attached_file :document, styles: {
+  has_attached_file :file, styles: {
       thumb: { geometry: "150x150", format: "jpg" },
       square: '200x200#',
       medium: '300x300>'
-  }, processors: [:ghostscript]
+  }
 
 
   def self.search(search)
