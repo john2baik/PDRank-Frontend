@@ -28,11 +28,11 @@ class UsersController < ApplicationController
     end
   end
 
+# handle a successful update.
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       redirect_to @user
-# Handle a successful update.
     else
       render 'edit'
     end
