@@ -14,15 +14,14 @@
           </div>
           <div class="avatar">
             <h1>
-              <%= avatar_for @user %>
+              <%= gravatar_for @user %>
               <br>
               <%= @user.name %>
             </h1>
           </div>
           <div class="info">
             <div class="title">
-              <h4>Biography: </h4>
-              <h6> <%= @user.bio %></h6>
+              <h4>Biography:  <%= @user.bio %> </h4>
               <br>
               <h4>Institution: <%= @user.institution %> </h4>
               <br>
@@ -217,7 +216,7 @@
       </script>
       <br>
       <% if @user.microposts.any? %>
-          <h3>Microposts (<%= @user.microposts.count %>)</h3>
+          <h3>Comments (<%= @user.microposts.count %>)</h3>
           <ol class="microposts" style="height: 100%">
             <%= render @microposts %>
           </ol>

@@ -1,13 +1,15 @@
 <div class="comments">
-  <li id="micropost-<%= micropost.id %>">
-  <div class="col-md-2">
-    <%= link_to avatar_for(micropost.user, size: 50), micropost.user, class: 'picture' %>
-  </div>
-  <div class="col-md-10">
-    <h1 class="comment-user"><%= link_to micropost.user.name, micropost.user %></h1>
-    <h2><%= micropost.content %></h2>
-    <h3>
-    Posted <%= time_ago_in_words(micropost.created_at) %> ago.
-    </h3>
+  <li id="micropost-<%= micropost.id %>"></li>
+  <div class="row">
+    <div class="col-md-2">
+      <%= gravatar_for @user %>
+    </div>
+    <div class="col-md-10">
+      <h1 class="comment-user"><%= link_to micropost.user.name, micropost.user %></h1>
+      <h2><%= micropost.content %></h2>
+      <h3>
+        Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+      </h3>
+    </div>
   </div>
 </div>
