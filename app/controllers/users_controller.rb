@@ -42,8 +42,9 @@ class UsersController < ApplicationController
     require 'fileutils'
     require 'filewatcher'
 
-    givenpath = "/Users/johnbaik/desktop/savedSearches/user_input.txt"
-    togglepath = "/Users/johnbaik/desktop/savedSearches/input.txt"
+    givenpath = "/Users/ezhou7/PycharmProjects/cs370/resources/user_input.txt"
+    togglepath = "/Users/ezhou7/PycharmProjects/cs370/resources/input.txt"
+
     dir = File.dirname(givenpath)
     unless File.directory?(dir)
       FileUtils.mkdir_p(dir)
