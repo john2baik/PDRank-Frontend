@@ -1,10 +1,7 @@
 <div class="profile">
-  <div class="col-md-4">
-    <%= link_to gravatar_for(current_user, size: 75), current_user %>
-  </div>
+
   <div class="col-md-8">
     <h1><%= current_user.name %></h1>
-    <h7><%= link_to "View my profile", current_user %></h7>
     <br>
     <h7><%= pluralize(current_user.microposts.count, "comment") %></h7>
     <br>
