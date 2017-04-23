@@ -10,3 +10,32 @@
   line-height: 1;
   margin-top: 0%;
 }
+.comments{
+  .col-md-2{
+    margin: 0 auto;
+    .picture{
+      width:100%;
+      height:100%;
+      margin:0 auto;
+    }
+  }
+  .col-md-10{
+    padding-left: 50px;
+    h1.comment-user{
+      font-size: 1.5em;
+      margin-top: 0px;
+      text-align: left;
+      color: red;
+    }
+    h2{
+      text-align: left;
+      font-size: medium;
+      color: white;
+    }
+    h3{
+      text-align: left;
+      font-size:small;
+      color: grey;
+    }
+  }
+}
