@@ -16,6 +16,7 @@ class User < ApplicationRecord
   has_many :documents, dependent: :destroy
   mount_uploader :image, ImageUploader
   mount_uploader :document, DocumentUploader
+  serialize :paths, Array
 
   has_attached_file :avatar , styles: {
       thumb: '100x100>',

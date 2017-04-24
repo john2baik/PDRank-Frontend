@@ -7,6 +7,10 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
 
+  get '/json', to: 'users#prog_output.json'
+
+  get '/pdfviewer', to: 'static_pages#pdfviewer'
+
   get '/help', to: 'static_pages#help'
 
   get '/about', to: 'static_pages#about'

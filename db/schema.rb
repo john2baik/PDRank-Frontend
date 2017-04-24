@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170422153035) do
+ActiveRecord::Schema.define(version: 20170424095106) do
 
   create_table "documents", force: :cascade do |t|
     t.string   "author"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20170422153035) do
     t.datetime "avatar_updated_at"
     t.string   "institution"
     t.text     "search"
+    t.string   "paths"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

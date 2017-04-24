@@ -1,9 +1,6 @@
 <% provide(:title, @user.name) %>
 <img src="/assets/background.jpg" id="background-image2" />
 
-<script src="search.js.erb" type="text/javascript" charset="utf-8">
-</script>
-
 <div class="container">
   <div class="row">
 
@@ -78,8 +75,13 @@
       <%= form_tag(:action => "search") do %>
           <%= label_tag(:search, "Search for Document or Topic") %>
           <%= text_field_tag :search %>
-          <%= submit_tag("Submit") %>
+          <%= submit_tag("Submit", onsubmit: "get_json();") %>
       <% end %>
+
+      <!--<form>-->
+        <!--<input type="text" name="search" placeholder="Search for a Topic or Document...">-->
+        <!--<input type="submit" value="Submit" onsubmit="get_json();">-->
+      <!--</form>-->
 
 
       <div id="slideshow" class="slideshow-container">

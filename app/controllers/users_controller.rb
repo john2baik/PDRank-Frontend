@@ -45,31 +45,14 @@ class UsersController < ApplicationController
   def search
     @query = params[:search].to_s
     send_input @query
-    get_output
+    redirect_to pdfviewer_path
 
-    # dir = File.dirname(@@input_path)
-    # unless File.directory?(dir)
-    #   FileUtils.mkdir_p(dir)
+    # respond_to do |format|
+    #   format.js
+    #   format.html
     # end
-    # @query = params[:search].to_s
-    # f = File.open(@@input_path, 'w+')
-    # f.write(@query)
-    # f.flush
-    # f.close
-    #
-    # fir = File.dirname(@@input_toggle)
-    # unless File.directory?(fir)
-    #   FileUtils.mkdir_p(fir)
-    # end
-    # f = File.open(@@input_toggle, 'w')
-    #
-    # f.close
-    #
-    # flash[:success] = 'Search is processing in background...'
-    #
-    # FileWatcher.new('/Users/johnbaik/desktop/savedSearches').watch do |filename, event|
-    #   flash[:success] = "File #{event}: #{filename}"
-    # end
+
+    # get_output
   end
 
   def send_input(search_input)
@@ -85,27 +68,30 @@ class UsersController < ApplicationController
 
     ftg = File.open(@input_toggle, 'w')
     ftg.close
+    # redirect_to User.find(params[:user_id])
   end
 
   def get_output
-    @output_path = '/Users/ezhou7/PycharmProjects/cs370/resources/prog_output.txt'
+    @output_path = '/Users/ezhou7/PycharmProjects/cs370/resources/prog_output.json'
     @output_toggle = '/Users/ezhou7/PycharmProjects/cs370/resources/output.txt'
 
     if FileTest.exist?(@output_toggle)
       paths = []
       IO.foreach(@output_path) { |line| paths.append line}
 
+      @user = User.find(params[:id])
+
+
       paths.each_with_index { |path, i|
-        render :js => "creat_slide(%s, %d, %d);" % [path, i, paths.length]
+        # render :js => "creat_slide(%s, %d, %d);" % [path, i, paths.length], :remote => true
+        render :partial => 'users/show.html.erb'
       }
     end
   end
 
-  #        render :js => 'creat_slide(%s, %d, %d);' % [path, i, paths.length], :file => 'search.js.erb'
-
 
   private
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation, :avatar, :bio, :institution, :age, :sex, :profession, :search)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation, :avatar, :bio, :institution, :age, :sex, :profession, :search, :paths)
     end
 end

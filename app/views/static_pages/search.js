@@ -2,20 +2,38 @@
  * Created by ezhou7 on 4/23/17.
  */
 
+function get_json(parent) {
+    var url = "../prog_output.json";
+    var fail = true;
+    var paths = [];
+    console.log("working");
+
+    while (fail) {
+        $.getJSON(url, function(j) {
+            fail = false;
+            paths = j.paths;
+        }).error(function() { fail = true; })
+    }
+
+    for (var i = 0; i < paths.length; i++) {
+        parent.appendChild(creat_slide(paths[i], i, paths.length));
+    }
+}
+
 function creat_slide(pdf_path, pdf_num, max_num) {
     var slide_div = document.createElement("div");
 
     slide_div.className = "mySlides fade";
     slide_div.id = "pdf_slide_" + pdf_num.toString();
 
-    slide_div.appendChild(creat_numtext(pdf_num, 5));
+    slide_div.appendChild(creat_numtext(pdf_num, max_num));
 
     slide_div.appendChild(document.createElement("br"));
     slide_div.appendChild(document.createElement("br"));
 
     slide_div.appendChild(inner_container(pdf_path));
 
-    document.getElementById("slideshow").appendChild(slide_div);
+    return slide_div;
 }
 
 function creat_numtext(slide_num, max_slides) {
