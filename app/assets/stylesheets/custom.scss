@@ -336,8 +336,8 @@ footer {
 /* ---------------------aboutpage--------------- */
 div.floating-box{
   float: left;
-  margin: 100px;
-  width: 100px;
+  margin: 50px;
+  width: 200px;
   #face{
     display: block;
     width: 150px;
@@ -346,8 +346,10 @@ div.floating-box{
     margin-left: auto;
     margin-right:auto;
   }
-  .member{
-    display: block;
+  h1{
+    font-size: 1.2em;
+    margin-top: 0px;
+    font-family: "verdana";
     text-align:center;
   }
 }
@@ -497,5 +499,7 @@ span.picture {
     border: 0;
   }
 }
+
+
 
 
