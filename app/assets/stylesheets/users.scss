@@ -173,3 +173,41 @@ label{
 .title{
   color: white;
 }
+
+
+.col-lg-3{
+ overflow: hidden;
+  .form-group{
+    .form-control{
+      color: #730E15;
+      width:90%;
+    }
+  }
+}
+.col-md-8{
+  .slideshow-container{
+    height: 525px;
+    .mySlides{
+      .numbertext{
+        width: 100%;
+        text-align: center;
+      }
+      .container{
+        width: 100%;
+        height: 500px;
+        .row{
+          width: 100%;
+          margin:0 auto;
+          .panel{
+            background-color: transparent;
+            width: 90%;
+            height: 500px;
+            margin-left: 5%;
+            margin-right: 5%;
+          }
+        }
+
+      }
+    }
+  }
+}

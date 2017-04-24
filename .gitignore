@@ -28,7 +28,6 @@ Would skip repository JamSesh2/
 .idea/*
 /.idea
 
-<<<<<<< HEAD
 .idea/runConfigurations/Development__untitled.xml
 Gemfile
 Gemfile.lock
