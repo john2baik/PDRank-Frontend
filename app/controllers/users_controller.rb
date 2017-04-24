@@ -1,3 +1,7 @@
+require 'fileutils'
+require 'filewatcher'
+
+
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
@@ -39,43 +43,69 @@ class UsersController < ApplicationController
   end
 
   def search
-    require 'fileutils'
-    require 'filewatcher'
-
-    givenpath = "/Users/ezhou7/PycharmProjects/cs370/resources/user_input.txt"
-    togglepath = "/Users/ezhou7/PycharmProjects/cs370/resources/input.txt"
-
-    dir = File.dirname(givenpath)
-    unless File.directory?(dir)
-      FileUtils.mkdir_p(dir)
-    end
     @query = params[:search].to_s
-    f = File.open(givenpath, "w+")
-    f.write(@query)
-    f.flush
-    f.close
+    send_input @query
+    get_output
 
-    fir = File.dirname(togglepath)
-    unless File.directory?(fir)
-      FileUtils.mkdir_p(fir)
+    # dir = File.dirname(@@input_path)
+    # unless File.directory?(dir)
+    #   FileUtils.mkdir_p(dir)
+    # end
+    # @query = params[:search].to_s
+    # f = File.open(@@input_path, 'w+')
+    # f.write(@query)
+    # f.flush
+    # f.close
+    #
+    # fir = File.dirname(@@input_toggle)
+    # unless File.directory?(fir)
+    #   FileUtils.mkdir_p(fir)
+    # end
+    # f = File.open(@@input_toggle, 'w')
+    #
+    # f.close
+    #
+    # flash[:success] = 'Search is processing in background...'
+    #
+    # FileWatcher.new('/Users/johnbaik/desktop/savedSearches').watch do |filename, event|
+    #   flash[:success] = "File #{event}: #{filename}"
+    # end
+  end
+
+  def send_input(search_input)
+    @input_path = '/Users/ezhou7/PycharmProjects/cs370/resources/user_input.txt'
+    @input_toggle = '/Users/ezhou7/PycharmProjects/cs370/resources/input.txt'
+
+    fout = File.open(@input_path, 'w+')
+
+    fout.write(search_input)
+
+    fout.flush
+    fout.close
+
+    ftg = File.open(@input_toggle, 'w')
+    ftg.close
+  end
+
+  def get_output
+    @output_path = '/Users/ezhou7/PycharmProjects/cs370/resources/prog_output.txt'
+    @output_toggle = '/Users/ezhou7/PycharmProjects/cs370/resources/output.txt'
+
+    if FileTest.exist?(@output_toggle)
+      paths = []
+      IO.foreach(@output_path) { |line| paths.append line}
+
+      paths.each_with_index { |path, i|
+        render :js => "creat_slide(%s, %d, %d);" % [path, i, paths.length]
+      }
     end
-    f = File.open(togglepath, "w")
+  end
 
-    f.close
+  #        render :js => 'creat_slide(%s, %d, %d);' % [path, i, paths.length], :file => 'search.js.erb'
 
-    flash[:success] = "Search is processing in background..."
-
-    FileWatcher.new('/Users/johnbaik/desktop/savedSearches').watch do |filename, event|
-      flash[:success] = "File #{event}: #{filename}"
-    end
-
-
-    end
 
   private
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation, :avatar, :bio, :institution, :age, :sex, :profession, :search)
     end
-
-
 end
