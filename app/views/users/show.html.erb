@@ -31,8 +31,11 @@
               <h4>Profession: <%= @user.profession %> </h4>
               <br>
             </div>
-            <br>
-            <%= link_to 'Edit Profile', edit_user_path, class: 'btn btn-lg btn-primary',style:"color: white" %>
+            <div class="btn-toolbar">
+              <%= link_to 'Edit', edit_user_path, class: 'btn btn-lg btn-primary',style:"color: white" %>
+              <%= link_to 'Post Comment', root_path, class: 'btn btn-lg btn-primary',style:"color: white; " %>
+            </div>
+
 
           </div>
         </div>
