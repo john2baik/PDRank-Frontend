@@ -57,3 +57,4 @@ db/development.sqlite3
 config/env.yml
 # Ignore application configuration
 /config/application.yml
+Gemfile
