@@ -33,18 +33,15 @@
         <%= f.label :password_confirmation, "Confirmation" %>
         <%= f.password_field :password_confirmation, class: 'form-control' %>
         </br>
-        <%= f.label :avatar, "Upload your own avatar picture" %>
-        <%= f.file_field :avatar %>
-
 
         <div class="actions">
             </div>
 
 
-        <%# <div class="gravatar_edit">%>
-        <%#<%= gravatar_for @user %>
-        <%#<%= link_to 'Change Gravatar',"http://gravatar.com/emails", class: 'btn btn-primary' %>
-        <%#</div> %>
+        <div class="gravatar_edit">
+        <%= gravatar_for @user %>
+        <%= link_to 'Change Gravatar',"http://gravatar.com/emails", class: 'btn btn-primary' %>
+        </div>
 
         <br>
         <%= f.submit "Save changes", class: "btn btn-primary" %>

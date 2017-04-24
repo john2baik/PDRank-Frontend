@@ -5,15 +5,50 @@
 <% if logged_in? %>
     <img src="/assets/library.jpg" id="background-image" /><br>
     <div class="row">
-      <aside class="col-md-4">
+      <div class="col-lg-3 col-sm-6" style="height: 505px;overflow: hidden; margin-top: -50px">
+
+        <div class="cards">
+          <div class="card hovercard">
+            <div class="cardheader">
+
+            </div>
+            <div class="avatar">
+              <h1>
+                <%= gravatar_for @current_user %>
+                <br>
+              </h1>
+            </div>
+            <div class="info">
+              <div class="title">
+                <h4>Biography:  <%= @current_user.bio %> </h4>
+                <br>
+                <h4>Institution: <%= @current_user.institution %> </h4>
+                <br>
+                <h4>Profession: <%= @current_user.profession %> </h4>
+                <br>
+                <%= link_to 'View Profile', current_user, class: 'btn btn-lg btn-primary',style:"color: white" %>
+              </div>
+              <br>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+      <div class="col-md-6" style="height: 450px; padding-top: -50px;">
         <section class="user_info">
           <%= render 'shared/user_info' %>
         </section>
         <br>
-        <section class="micropost_form" style="align-content: center">
+        <section class="micropost_form" style="overflow: hidden;align-content: center">
           <%= render 'shared/microposts_form' %>
         </section>
-      </aside>
+      </div>
+
     </div>
 <% else %>
   <head>
